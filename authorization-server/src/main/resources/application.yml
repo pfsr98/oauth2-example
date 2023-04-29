@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+        oauth: TRACE
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/oauth2example?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        format_sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    show-sql: true
