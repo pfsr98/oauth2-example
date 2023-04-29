@@ -6,19 +6,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-/*@RequiredArgsConstructor*/
-public class AuthorizationServerApplication /*implements CommandLineRunner*/ {
-    /*private final RoleRepo roleRepo;*/
+@RequiredArgsConstructor
+public class AuthorizationServerApplication implements CommandLineRunner {
+    private final RoleRepo roleRepo;
 
     public static void main(String[] args) {
         SpringApplication.run(AuthorizationServerApplication.class, args);
     }
 
-    /*@Override
+    @Override
     public void run(String... args) throws Exception {
         Role adminRole = Role.builder().role(RoleName.ROLE_ADMIN).build();
         Role userRole = Role.builder().role(RoleName.ROLE_USER).build();
         roleRepo.save(adminRole);
         roleRepo.save(userRole);
-    }*/
+    }
 }
